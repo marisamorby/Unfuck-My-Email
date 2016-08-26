@@ -222,3 +222,18 @@ margin-left: 10px;
 	top: -100%;
 	left: -100%;
 }
+
+.footer{
+	display: block;
+}
+
+.footer-text{
+	font-size: 12px;
+	text-align: center;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.footer-link, .footer-link:active, .footer-link:focus, .footer-link:visited{
+	color: #000000;
+}
