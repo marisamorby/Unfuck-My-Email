@@ -109,6 +109,11 @@ p {
 	font-size: 28px;
 }
 
+.choose-form {
+  display: block;
+  margin-top: 20px;
+}
+
 .question-heading{
 	padding-top: 80px;
 	text-align: center;
