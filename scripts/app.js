@@ -12,10 +12,11 @@
   // Build the form based on the current 
   var forms = [
     {
+      category: 'damage-control',
       name: 'The client didn’t respond to my last email about a missed deadline.',
       heading: 'Call first. If that doesn’t work, try this.',
-      subheading: 'You’re probably pissed by now. Remember that you and you’re client are on the same team.',
-      slug: 'second missed deadline',
+      subheading: 'You’re probably pissed by now. Remember that you and your client are on the same team.',
+      slug: 'second-missed-deadline',
       template_id: 'missed-deadline-two',
       questions: [
         {
@@ -99,10 +100,11 @@
       ],
     },
     {
+      category: 'damage-control',
       name: 'The client didn’t get me what I needed and we missed a deadline.',
       heading: 'Get your project back on track.',
       subheading: 'And keep yourself sane.',
-      slug: 'first missed deadline',
+      slug: 'first-missed-deadline',
       template_id: 'missed-deadline-one',
       questions: [
         {
@@ -164,10 +166,11 @@
       ],
     },
     {
+      category: 'damage-control',
       name: 'We’re coming up on a deadline and I need more information.',
       heading: 'Don’t get blamed for a missed deadline.',
       subheading: 'You need all the information so you can kick all the ass.',
-      slug: 'upcoming deadline',
+      slug: 'upcoming-deadline',
       template_id: 'upcoming-deadline',
       questions: [
         {
@@ -266,10 +269,11 @@
       ],
     },
     {
+      category: 'damage-control',
       name: 'My client is asking for lots of extra things.',
       heading: 'Start setting boundaries. Stop doing unpaid work.',
       subheading: 'Scope creep’s a real bitch. Don’t let it get you down.',
-      slug: 'scope_creep',
+      slug: 'scope-creep',
       template_id: 'scope-creep',
       questions: [
         {
@@ -293,6 +297,7 @@
       ],
     },
     {
+      category: 'project-lifecycle',
       name: 'Project Contract',
       heading: 'Every project needs a contract.',
       subheading: 'Yes, even this one. Don’t worry, I got you covered.',
@@ -459,10 +464,12 @@
       ],
     },*/
     {
+      category: 'project-lifecycle',
       name: 'Follow-Up After a First Meeting',
       heading: 'Need to follow up with a client after your first meeting?',
       subheading: 'Answer these questions and we’ll sort that shit out.',
       slug: 'first-meeting-follow-up',
+      template_id: 'contract-template',
       questions: [
         {
           type: 'text',
@@ -580,7 +587,6 @@
           ],
         },
       ],
-      template_id: 'contract-template',
     },
   ];
 
@@ -659,6 +665,10 @@
     return this.type === 'radio' ? radioInput(this) : textInput(this);
   }
 
+  function filterFormsByCategory(forms, category) {
+    return forms.filter(form => form.category === category);
+  }
+
   /**
    * Updates the page to show the proper markup.
    * @param  {Object} forms the forms available to the app
@@ -724,35 +734,36 @@
        */
       chooser.show();
 
-      // Get the element that should display the forms.
-      var availableTemplates = $('.available-templates');
-
       // Get the template to display the avaiable forms.
       var chooserTemplate = Handlebars.compile($('#available-templates').html());
-      
-      // Add the forms as the context.
-      var context = {
-        forms: forms,
-      };
 
-      // Show the available forms to the user.
-      availableTemplates.html(chooserTemplate(context));
+      // Get the elements that should display the forms.
+      var availableTemplates = $('.available-templates');
+
+      // Loop through display elements and show forms matching each category.
+      availableTemplates.each(function() {
+        var category = $(this).data('category');
+        var context = {
+          forms: filterFormsByCategory(forms, category),
+        };
+        $(this).html(chooserTemplate(context));
+      });
 
       // Add an event listener so we can show the right form when the user chooses.
-      var chooserForm = $('#choose-a-form');
-      chooserForm.on('submit', function(event) {
+      // var chooserForm = $('#choose-a-form');
+      // chooserForm.on('submit', function(event) {
 
-        // Stop the form from actually submitting.
-        event.preventDefault();
+      //   // Stop the form from actually submitting.
+      //   event.preventDefault();
 
-        // Get the 
-        var submitted = chooserForm.serializeArray();
-        var data = formToHandlebars(submitted);
+      //   // Get the 
+      //   var submitted = chooserForm.serializeArray();
+      //   var data = formToHandlebars(submitted);
 
-        if (data.form) {
-          window.location.hash = '#' + data.form;
-        }
-      });
+      //   if (data.form) {
+      //     window.location.hash = '#' + data.form;
+      //   }
+      // });
     }
   }
 
