@@ -693,6 +693,13 @@
 
     // Make sure a valid form was selected before we get all crazy here.
     if (formValues) {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Forms',
+        eventAction: 'open',
+        eventLabel: formSlug
+      });
+
 
       // Hide the chooser.
       chooser.hide();
