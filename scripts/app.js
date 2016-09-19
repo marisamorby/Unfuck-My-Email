@@ -642,6 +642,14 @@
    */
   function showCopiedMessage() {
     var confirmation = $('.copied-box');
+    var formSlug = window.location.hash.split('#')[1];
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'template',
+        eventAction: 'copy',
+        eventLabel: formSlug
+      });
+
 
     // Remove the class so the message fades in (CSS animates it).
     confirmation.removeClass('copied-box-hidden');
