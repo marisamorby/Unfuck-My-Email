@@ -4,6 +4,9 @@
   "description": "A tool to help freelancers make email suck less.",
   "main": "app/index.js",
   "scripts": {
+    "watch": "run-p watch:*",
+    "watch:rollup": "rollup -c --watch",
+    "watch:serve": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
