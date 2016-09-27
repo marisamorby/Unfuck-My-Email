@@ -8,7 +8,7 @@
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="/static/css/main.css" type="text/css" media="screen">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,900" rel="stylesheet">
 	</head>
 	<body>
@@ -163,7 +163,7 @@
 </script>
 
 <script id="input-text" type="text/x-handlebars-template">
-    <div class="row question-block"> 
+    <div class="row question-block">
         <div class="col-md-8 col-md-offset-2">
             <h2 class="question-title">{{ label }}</h2>
             <div class="row">
@@ -176,7 +176,7 @@
 </script>
 
 <script id="input-radio" type="text/x-handlebars-template">
-    <div class="row question-block"> 
+    <div class="row question-block">
         <div class="col-md-8 col-md-offset-2">
             <h2 class="question-title">{{ label }}</h2>
             <div class="question-options">
@@ -213,7 +213,7 @@ Hey {{client_name}}, <br>
 <br>
 Thanks so much for taking the time to {{meeting_type}} the other day. I’m really {{project_feeling}} this project. I’ve taken the details from the proposal I sent you and included everything in the contract.<br>
 <br>
-I know contracts {{contract_feeling}}, but it's one document that lays everything out from the proposal, plus includes payment details, and the legal info to protect us both.<br> 
+I know contracts {{contract_feeling}}, but it's one document that lays everything out from the proposal, plus includes payment details, and the legal info to protect us both.<br>
 <br>
 The best part is it's all written in plain English — no legalese for me! <br>
 <br>
@@ -232,9 +232,9 @@ Hi {{client_name}},<br>
 <br>
 I hope you’re having a good week. I reviewed the email that you sent me about additional updates. I’m so glad that you’ve been happy with my work, and I’ve had a great time working on this project with you.<br>
 <br>
-I’ve made a few of the changes you listed, but {{update_one}} in addition will take me a few hours.<br> 
+I’ve made a few of the changes you listed, but {{update_one}} in addition will take me a few hours.<br>
 <br>
-I’m happy to do this for you so you don’t have to worry about it. In order to start, I just need you to approve a new scope of work to make sure that everything is covered and that we’re both on the same page for the changes that need to happen.<br> 
+I’m happy to do this for you so you don’t have to worry about it. In order to start, I just need you to approve a new scope of work to make sure that everything is covered and that we’re both on the same page for the changes that need to happen.<br>
 <br>
 I went ahead and included an updated scope to this email. If it looks alright, once it's signed and returned I can go ahead and keep working on the changes. If you’ve got questions, I’m happy to clarify the scope or get on a call to discuss it.<br>
 <br>
@@ -246,7 +246,7 @@ Thanks,<br>
 <script id="upcoming-deadline" type="text/x-handlebars-template">
 Hi {{client_name}}<br>
 <br>
-I’m going through my to-do list and see that we have our first deadline for the project {{days}}. In order to hit this, I still need you to send over {{items}} {{date}}.<br> 
+I’m going through my to-do list and see that we have our first deadline for the project {{days}}. In order to hit this, I still need you to send over {{items}} {{date}}.<br>
 <br>
 Please let me know if you need anything or if I can help in any way. Thanks so much!<br>
 <br>
@@ -258,15 +258,15 @@ Have a great day,<br>
 <script id="missed-deadline-one" type="text/x-handlebars-template">
 Hi {{client_name}},<br>
 <br>
-I wanted to check in and see what the status was on providing the items we talked about for the project.<br> 
+I wanted to check in and see what the status was on providing the items we talked about for the project.<br>
 <br>
 Since our original deadline passed {{day}}, we'll just need to update our timelines.<br>
 <br>
-On the current schedule, if I can get this info today, it will push the project back {{approximate_time}}. Please let me know if you need anything from me.<br> 
+On the current schedule, if I can get this info today, it will push the project back {{approximate_time}}. Please let me know if you need anything from me.<br>
 <br>
-As of right now, I’m unable to move forward with the project without these items.<br> 
+As of right now, I’m unable to move forward with the project without these items.<br>
 <br>
-If you’re having any trouble, I’m happy to get on a call with you and see how I can help.<br> 
+If you’re having any trouble, I’m happy to get on a call with you and see how I can help.<br>
 <br>
 Thanks!<br>
 <br>
@@ -278,7 +278,7 @@ Hi {{client_name}},<br>
 <br>
 I gave you a call earlier to see if there was any other information you needed from me in order to send over the items we talked about. I was wondering if you had time for a 30 minute call {{date}}, between {{time_one}} to discuss it.<br>
 <br>
-We’ve missed our deadline by {{number_of_days}}, and I really want to make sure that we’re able to stay within your timeframe.<br> 
+We’ve missed our deadline by {{number_of_days}}, and I really want to make sure that we’re able to stay within your timeframe.<br>
 <br>
 Right now, I’m unable to move forward with the project without the items we discussed.<br>
 <br>
@@ -292,7 +292,8 @@ Thanks so much,<br>
 <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
 <script type="text/javascript">console.log(window.ClipboardEvent);</script>
 
-<script src="scripts/app.js"></script>
+<!-- <script src="scripts/app.js"></script> -->
+<script src="static/js/main.min.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -304,6 +305,6 @@ Thanks so much,<br>
   ga('send', 'pageview');
 
 </script>
-    
+
   </body>
 </html>
