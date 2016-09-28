@@ -273,3 +273,17 @@ margin-left: 10px;
 .footer-link, .footer-link:active, .footer-link:focus, .footer-link:visited{
   color: #000000;
 }
+
+.js--enable-show-hide {
+  opacity: 1;
+  transition: 300ms opacity ease-in-out;
+}
+
+.js--fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.js--hidden {
+  display: none;
+}
