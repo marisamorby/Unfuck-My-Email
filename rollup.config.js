@@ -17,8 +17,8 @@ export default {
         'src/styles/**',
       ],
       globals: [
-        '$',
         'Handlebars',
+        'Clipboard',
       ],
     }),
     babel({
