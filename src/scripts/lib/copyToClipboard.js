@@ -22,8 +22,10 @@ export function enableCopyToClipboard () {
 
   // Initialize the copy-to-clipboard button.
   const btn = document.getElementById('btn');
-  const clipboard = new Clipboard(btn);
+  if (btn) {
+    const clipboard = new Clipboard(btn);
 
-  // After copying, show a notification.
-  clipboard.on('success', showCopiedMessage);
+    // After copying, show a notification.
+    clipboard.on('success', showCopiedMessage);
+  }
 }
