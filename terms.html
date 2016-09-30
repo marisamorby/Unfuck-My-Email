@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>What is Unfuck My Email?</title>
+
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,600,900" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAZqjjLMngTAiSPJfEPengclyItBU_pjaQ",
+        authDomain: "unfuck-my-email.firebaseapp.com",
+        databaseURL: "https://unfuck-my-email.firebaseio.com",
+        storageBucket: "unfuck-my-email.appspot.com",
+        messagingSenderId: "856479394894"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- App styles -->
+    <link href="/static/css/main.css" rel="stylesheet">
+  </head>
+
+    <nav class="site-nav">
+      <a href="./" rel="home" class="site-nav__link site-nav__link--active">
+        Unfuck My Email
+      </a>
+      <a href="./templates.html" class="site-nav__link">
+        Templates
+      </a>
+      <a href="./about.html" class="site-nav__link">
+        About
+      </a>
+      <div class="site-nav__user-info user-info">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             class="user-info__photo user-info__photo--hidden">
+        <div class="user-info__block">
+          <span class="user-info__name"></span>
+          <a href="./login.html"
+             class="user-info__logout btn btn-default">
+            Log In or Create an Account
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="template" class="container">
+        <div class="row template-heading">
+            <h1>Terms and Conditions</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <p>
+                    Coming soon. Guiding principle: don’t be a dick.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <p class="footer-text">
+        All Content &copy; Marisa Morby. Made just for you with &hearts; and buckets of chocolate by <a class="footer-link" href="http://www.marisamorby.com">Marisa Morby</a>.
+      </p>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    <!-- Scripts to run the app. -->
+    <script src="static/js/main.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-58696530-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>
