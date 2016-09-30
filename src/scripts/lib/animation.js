@@ -20,6 +20,10 @@ function enable(element) {
  */
 export function show(element, queuedShowOrHide) {
 
+  if (!element) {
+    return;
+  }
+
   // If `hide()` has been called, clear the timeout to avoid problems.
   if (queuedShowOrHide) {
     clearTimeout(queuedShowOrHide);
@@ -40,6 +44,10 @@ export function show(element, queuedShowOrHide) {
  * @return {Number}          a timeoutID
  */
 export function hide(element) {
+
+  if (!element) {
+    return;
+  }
 
   // Ensure the element supports animation.
   enable(element);
