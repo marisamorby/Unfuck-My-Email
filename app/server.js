@@ -2,15 +2,22 @@ const http = require('http');
 const path = require('path');
 const fs = require('fs');
 
+const fileTypes = {
+  css: 'text/css',
+  js: 'application/javascript',
+};
+
 const server = http.createServer((req, res) => {
 
   // If the path starts with `static`, it’s a local asset.
   if (req.url.match(/^\/static/)) {
-    console.log(`Static asset requested: ${req.url}`);
+    console.log(`Asset requested: ${req.url}`);
 
     const assetPath = path.join(__dirname, '../', req.url);
-
-    console.log(assetPath);
+    const contentType = Object.keys(fileTypes).reduce((contentType, ext) => {
+      const pattern = new RegExp(`\.${ext}`);
+      return !!req.url.match(pattern) ? fileTypes[ext] : contentType;
+    }, 'text/plain');
 
     // Load the asset and return it.
     fs.readFile(assetPath, (error, data) => {
@@ -20,7 +27,7 @@ const server = http.createServer((req, res) => {
         return res.end('404: not found');
       }
 
-      res.writeHead(200);
+      res.writeHead(200, { 'Content-Type': contentType });
       res.write(data);
 
       return res.end();
