@@ -576,4 +576,78 @@ export default [
       },
     ],
   },
+  {
+    category: 'project-lifecycle',
+    name: 'I’d like to get a referral from my client.',
+    heading: 'Want more money? Then get those referrals.',
+    subheading: 'More money means more burritos, people. And everyone wants more burritos.',
+    slug: 'referral',
+    template_id: 'client-referral',
+    questions: [
+      {
+        type: 'text',
+        label: 'What’s your name?',
+        name: 'name',
+        id: 'name',
+      },
+      {
+        type:'text',
+        label: 'What’s your client’s name?',
+        name: 'client_name',
+        id: 'client_name',
+      },
+      {
+        type: 'text',
+        label: 'In one word, what is your main job title? (copywriter, web developer, graphic designer...?)',
+        name: 'your_role',
+        id: 'your_role',
+      },
+      {
+        type: 'text',
+        label: 'What’s one service you’re offering right now? (ex. blog posts, website maintenance, logo design...?)',
+        name: 'specific_thing_one',
+        id: 'specific_thing_one',
+      },
+      {
+        type: 'text',
+        label: 'What’s another service you’re excited about offering? (ex. article research, website updates, design updates...?)',
+        name: 'specific_thing_two',
+        id: 'specific_thing_two',
+      },
+      {
+        type: 'text',
+        label: 'Okay, pick one more thing you’d like to do. Last one, I swear. (ex. editing, template modifications, illustrations...?)',
+        name: 'specific_thing_three',
+        id: 'specific_thing_three',
+      },
+    ],
+  },  
+  {
+    category: 'project-lifecycle',
+    name: 'I want to get feedback on a completed project.',
+    heading: 'Happy clients throw money at you.',
+    subheading: 'Just ask them not to throw quarters. Cuz that shit hurts.',
+    slug: 'feedback',
+    template_id: 'client-feedback',
+    questions: [
+      {
+        type: 'text',
+        label: 'What’s your name?',
+        name: 'name',
+        id: 'name',
+      },
+      {
+        type:'text',
+        label: 'What’s your client’s name?',
+        name: 'client_name',
+        id: 'client_name',
+      },
+      {
+        type: 'text',
+        label: 'What’s the link to your client survey? (If you still need to create a survey, check out Survey Monkey!)',
+        name: 'client_survey',
+        id: 'client_survey',
+      }  
+    ], 
+  },   
 ];
