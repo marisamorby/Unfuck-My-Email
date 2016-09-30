@@ -8,6 +8,8 @@ import formTemplate from './form';
 import availableTemplates from './available-templates';
 import inputText from './input-text';
 import inputRadio from './input-radio';
+import clientReferral from './client-referral';
+import clientFeedback from './client-feedback';
 
 export default {
   'contract-template': contractTemplate,
@@ -20,4 +22,6 @@ export default {
   'available-templates': availableTemplates,
   'input-text': inputText,
   'input-radio': inputRadio,
+  'client-referral': clientReferral,
+  'client-feedback': clientFeedback,
 };
