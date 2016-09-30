@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>ABOUT UNFUCK MY EMAIL</title>
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>What is Unfuck My Email?</title>
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen">
-		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,900" rel="stylesheet">
-	</head>
-	<body>
-		<nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <p class="nav-button"><a class ="navbar-brand home-link" href="./index.html">UNFUCK MY EMAIL</a></p>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="./questions.html"><p class="nav-button">Answer the questions</p></a></li>
-                    <li><a href="./about.html"><p class="nav-button">About</p></a></li>
-                </ul>
-            </div>
-        </div><!-- /.container-fluid -->
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,600,900" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAZqjjLMngTAiSPJfEPengclyItBU_pjaQ",
+        authDomain: "unfuck-my-email.firebaseapp.com",
+        databaseURL: "https://unfuck-my-email.firebaseio.com",
+        storageBucket: "unfuck-my-email.appspot.com",
+        messagingSenderId: "856479394894"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- App styles -->
+    <link href="/static/css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a href="./" rel="home" class="site-nav__link">
+        Unfuck My Email
+      </a>
+      <a href="./templates.html" class="site-nav__link">
+        Templates
+      </a>
+      <a href="./about.html" class="site-nav__link site-nav__link--active">
+        About
+      </a>
+      <div class="site-nav__user-info user-info">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             class="user-info__photo user-info__photo--hidden">
+        <div class="user-info__block">
+          <span class="user-info__name"></span>
+          <a href="./login.html"
+             class="user-info__logout btn btn-default">
+            Log In or Create an Account
+          </a>
+        </div>
+      </div>
     </nav>
 
     <div class ="container">
@@ -54,26 +73,28 @@
                 </span></a>
             </div>
     </div>
-     <div class="container">
-        <p class="footer-text">All Content &copy; Marisa Morby. Made just for you with &hearts; and buckets of chocolate by <a class="footer-link" href="http://www.marisamorby.com">Marisa Morby</a>.</p>
+
+    <div class="container">
+      <p class="footer-text">
+        All Content &copy; Marisa Morby. Made just for you with &hearts; and buckets of chocolate by <a class="footer-link" href="http://www.marisamorby.com">Marisa Morby</a>.
+      </p>
     </div>
 
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
 
-     <!-- JQuery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Scripts to run the app. -->
+    <script src="static/js/main.min.js"></script>
 
-<!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-58696530-2', 'auto');
+      ga('send', 'pageview');
+    </script>
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-58696530-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
   </body>
 </html>
