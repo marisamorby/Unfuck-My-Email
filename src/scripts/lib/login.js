@@ -11,7 +11,7 @@ const checkLogin = callback => {
 
       // Redirect to the templates page if the user is already logged in.
       if (document.location.href.match(/login\.html/)) {
-        document.location.href = '/templates.html';
+        document.location.href = './templates.html';
         return;
       }
 
@@ -46,7 +46,7 @@ const checkLogin = callback => {
 
       // User is signed out.
       if (document.location.href.match(/templates\.html/)) {
-        document.location.href = '/login.html';
+        document.location.href = './login.html';
         return;
       }
 
