@@ -10,6 +10,7 @@ export default {
   external: [
     '$',
     'Handlebars',
+    'firebase',
   ],
   plugins: [
     eslint({
@@ -19,6 +20,7 @@ export default {
       globals: [
         'Handlebars',
         'Clipboard',
+        'firebase',
       ],
     }),
     babel({
