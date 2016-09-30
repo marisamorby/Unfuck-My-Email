@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<meta charset="utf-8"/>
-		<title>QUESTIONS AND TEMPLATE</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>Unfuck My Email — Get professional emails to send your clients in seconds.</title>
 
-		<!-- Dependencies -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,900" rel="stylesheet">
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,600,900" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAZqjjLMngTAiSPJfEPengclyItBU_pjaQ",
+        authDomain: "unfuck-my-email.firebaseapp.com",
+        databaseURL: "https://unfuck-my-email.firebaseio.com",
+        storageBucket: "unfuck-my-email.appspot.com",
+        messagingSenderId: "856479394894"
+      };
+      firebase.initializeApp(config);
+    </script>
 
     <!-- App styles -->
-		<link href="/static/css/main.css" rel="stylesheet">
-	</head>
+    <link href="/static/css/main.css" rel="stylesheet">
+  </head>
 	<body>
-	<nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <p class="nav-button"><a class ="navbar-brand home-link" href="./">UNFUCK MY EMAIL</a></p>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="./"><p class="nav-button">Get an Email Template</p></a></li>
-                    <li><a href="./about.html"><p class="nav-button">About</p></a></li>
-                </ul>
-            </div>
-        </div><!-- /.container-fluid -->
+
+    <nav class="site-nav">
+      <a href="./" rel="home" class="site-nav__link site-nav__link--active">
+        Unfuck My Email
+      </a>
+      <a href="./templates.html" class="site-nav__link">
+        Templates
+      </a>
+      <a href="./about.html" class="site-nav__link">
+        About
+      </a>
+      <div class="site-nav__user-info user-info">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             class="user-info__photo user-info__photo--hidden">
+        <div class="user-info__block">
+          <span class="user-info__name"></span>
+          <a href="./login.html"
+             class="user-info__logout btn btn-default">
+            Log In or Create an Account
+          </a>
+        </div>
+      </div>
     </nav>
 
     <div id="form-chooser" class="container">
@@ -42,74 +62,24 @@
                 </div>
             </div>
         </div>
-        <div id="choose-a-form">
             <div class="row">
-                <h3 class="choose-form col-md-8 col-md-offset-2 text-center">What kind of email do you need to send?</h3>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="email-list-box">
-                            <h3 class="text-center">Normal Project Emails</h3>
-                            <div class="available-templates"
-                                 data-category="project-lifecycle"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="email-list-box">
-                            <h3 class="text-center">My Shit's All Fucked Up. Help!</h3>
-                            <div class="available-templates"
-                                 data-category="damage-control"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <button class="btn btn-default btn-lg choose-form">
+                    <a href="./templates.html"
+                       class="btn btn-default btn-lg choose-form">
                         Begin
-                    </button>
+                    </a>
                 </div>
-            </div> -->
-        </div>
-    </div>
-
-    <form id="template-questions" class="container"></form>
-
-    <div id="template" class="container">
-        <div class="row template-heading">
-            <h1>Here's your template.</h1>
-            <h2>Copy the template to your clipboard. Paste it in your email. Send it and forget it.</h2>
-        </div>
-        <div class="row">
-            <div class="template-box">
-              <p class="template-text"></p>
-            </div>
-            <!-- First Large button group -->
-            <div id="copiedBox" class="btn-group">
-                <span id="btn" data-clipboard-target=".copy-paste" class="btn btn-default btn-lg center-block">
-                        Copy to Clipboard
-                        <!-- Box that says "Copied!" -->
-                    <span class="copied-box copied-box-hidden">Copied!</span>
-                </span>
-            </div>
-            <!-- Second Large button group -->
-            <div class="btn-group">
-                <a class="my-button" href="./about.html">
-                <span class="btn btn-default btn-lg about-button center-block">
-                About this project</span></a>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container footer">
         <div class="row">
             <div class="col-md-12">
                 <p class="footer-text">All Content &copy; Marisa Morby. Made just for you with &hearts; and buckets of chocolate by <a class="footer-link" href="http://www.marisamorby.com">Marisa Morby</a>.</p>
             </div>
         </div>
     </div>
-
-    <!-- A textarea is required to avoid copy-pasting CSS styles into email editors. -->
-    <textarea class="copy-paste"></textarea>
 
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
