@@ -398,3 +398,18 @@ margin-left: 10px;
 .js--hidden {
   display: none;
 }
+
+#firebaseui-auth-container:empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+#firebaseui-auth-container:empty::after {
+  content: 'Loading...';
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  flex: 1;
+}

@@ -3,6 +3,13 @@
  * @return {void}
  */
 function showCopiedMessage() {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'template',
+    eventAction: 'copy',
+    eventLabel: window.location.hash.split('#')[1] || 'unknown'
+  });
+
   const confirmation = document.querySelector('.copied-box');
 
   // Remove the class so the message fades in (CSS animates it).
