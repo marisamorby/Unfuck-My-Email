@@ -15,6 +15,13 @@ const initialize = forms => {
   hide(template);
 
   if (formValues) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Forms',
+      eventAction: 'open',
+      eventLabel: formSlug
+    });
+
     const form = document.getElementById('template-questions');
     const formTemplate = Handlebars.compile(templates['form-template']);
 

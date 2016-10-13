@@ -34,7 +34,7 @@ p {
 }
 
 .navbar-default, .navbar-collapse {
-	    border-radius: 0 0 0 0 !important; 
+	    border-radius: 0 0 0 0 !important;
 		box-shadow: none !important;
 		border-color: #EFEDE1 !important;
 }
@@ -108,14 +108,14 @@ p {
 
 .btn-default:hover{
 	background-color: #000000;
-	color: #EFEDE1; 
+	color: #EFEDE1;
 	border-color: #000000;
 	text-shadow: 0 0 0;
 }
 
 .btn-default:active{
 	background-color: #000000;
-	color: #EFEDE1; 
+	color: #EFEDE1;
 	border-color: #000000;
 	text-shadow: 0 0 0;
 	outline: none;
@@ -123,7 +123,7 @@ p {
 
 .btn-default:focus{
 	background-color: #000000 !important;
-	color: #EFEDE1 !important; 
+	color: #EFEDE1 !important;
 	border-color: #000000 !important;
 	text-shadow: 0 0 0 !important;
 	outline: none !important;
@@ -273,4 +273,16 @@ margin-left: 10px;
 
 .footer-link, .footer-link:active, .footer-link:focus, .footer-link:visited{
 	color: #000000;
+}
+
+#firebaseui-auth-container:empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+#firebaseui-auth-container:empty::after {
+  content: 'Loading...';
+  flex: 1;
 }

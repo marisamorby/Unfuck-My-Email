@@ -1,3 +1,42 @@
+import { show, hide } from './animation';
+
+function handleLoginLoading() {
+
+  // Get the heading, subheading, and login container.
+  const login = document.getElementById('firebaseui-auth-container');
+
+  // We can bail here if the login controls aren’t on the page.
+  if (!login) {
+    return;
+  }
+
+  const heading = document.querySelector('.template-heading h1');
+  const subheading = document.querySelector('.template-heading h2');
+  const observer = new MutationObserver((mutations) => {
+    /*eslint no-console: 0*/
+    mutations.forEach(mutation => {
+      if (mutation.type === 'childList') {
+        if (!login.hasChildNodes()) {
+          hide(heading);
+          hide(subheading);
+
+          console.log('hiding elements...');
+        } else {
+          show(heading);
+          show(subheading);
+        }
+      }
+    });
+  });
+
+  observer.observe(login, {
+    attributes: true,
+    childList: true,
+    characterData: true,
+    subtree: true,
+  });
+}
+
 const checkLogin = callback => {
   firebase.auth().onAuthStateChanged(user => {
 
@@ -49,6 +88,8 @@ const checkLogin = callback => {
         document.location.href = './login.html';
         return;
       }
+
+      handleLoginLoading();
 
       // Update text and visibility for logged out state.
       photo.classList.add('user-info__photo--hidden');
