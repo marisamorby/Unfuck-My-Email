@@ -37,14 +37,9 @@
           firebase.auth.GithubAuthProvider.PROVIDER_ID,
           firebase.auth.EmailAuthProvider.PROVIDER_ID
         ],
-        'signInFlow': 'popup',
+
         // Terms of service url.
         'tosUrl': 'https://marisamorby.github.io/Unfuck-My-Email/terms.html',
-        'callbacks': {
-          'signInSuccess': function() {
-            console.log('Signed in as of now.');
-          },
-        },
       };
 
       // Initialize the FirebaseUI Widget using Firebase.
@@ -81,7 +76,7 @@
       </div>
     </nav>
 
-    <div id="template" class="container">
+    <div class="container">
         <div class="row template-heading">
             <h1>Please Log In.</h1>
             <h2>Log in or create an account in seconds.</h2>
@@ -92,14 +87,6 @@
         <div class="row">
             <div class="col-md-12">
                 <p class="footer-text">All Content &copy; Marisa Morby. Made just for you with &hearts; and buckets of chocolate by <a class="footer-link" href="http://www.marisamorby.com">Marisa Morby</a>.<br>See <a class="footer-link" href = "https://marisamorby.github.io/Unfuck-My-Email/terms.html">terms & conditions</a>.</br></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container footer">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="footer-text">All Content &copy; Marisa Morby. Made just for you with &hearts; and buckets of chocolate by <a class="footer-link" href="http://www.marisamorby.com">Marisa Morby</a>.</p>
             </div>
         </div>
     </div>

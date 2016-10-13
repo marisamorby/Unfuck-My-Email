@@ -4,21 +4,21 @@ body{
 }
 h1 {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   color: #000000;
   font-weight: 900;
 }
 
 h2 {
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 24px;
   color: #717171;
   font-weight: 500;
 }
 
 h3 {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 20px;
   color: #000000;
   font-weight: 500;
 }
@@ -27,6 +27,12 @@ p {
   font-size: 16px;
   color: #717171;
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 24px; }
 }
 
 .navbar-header, .navbar-collapse, .container-fluid {
@@ -156,7 +162,13 @@ p {
 }
 .home-text{
   text-align: center;
-  padding-top: 80px;
+  padding-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .home-text {
+    padding-top: 80px;
+  }
 }
 
 .nav-button:hover, .nav-button:active, .nav-button:focus{
@@ -170,10 +182,18 @@ p {
 .email-list-box{
   margin-top: 40px;
   border: 3px;
+  border-left-width: 0;
+  border-right-width: 0;
   border-color: #000000;
   border-style: solid;
   padding: 20px;
+}
 
+@media (min-width: 768px) {
+  .email-list-box {
+    border-left-width: 3px;
+    border-right-width: 3px;
+  }
 }
 
 .email-list{
@@ -193,7 +213,6 @@ p {
 
 .btn-group{
   display: block;
-  width: 100%;
   text-align: center;
 
 }
@@ -208,7 +227,7 @@ p {
   background-image: none;
   text-shadow: 0;
   font-weight: 600;
-  margin: 70px auto;
+  margin: 70px auto 0;
 }
 
 .btn-group>.btn:first-child {
@@ -247,7 +266,11 @@ p {
 
 .btn-lg{
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .btn-lg { font-size: 28px; }
 }
 
 .choose-form {
@@ -262,10 +285,6 @@ p {
 
 .question-block{
   padding-top: 80px;
-}
-
-.row {
-margin-left: 10px;
 }
 
 .question-title{
@@ -296,9 +315,18 @@ margin-left: 10px;
   height: auto;
   width: auto;
   border: 3px;
+  border-left-width: 0;
+  border-right-width: 0;
   border-color: #000000;
   border-style: solid;
   padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .template-box {
+    border-left-width: 3px;
+    border-right-width: 3px;
+  }
 }
 
 .template-text{
@@ -351,10 +379,6 @@ margin-left: 10px;
   font-size: 20px;
 }
 
-.about-button{
-  margin-top:0;
-}
-
 .email-link{
   color: #000000;
 }
@@ -402,8 +426,25 @@ margin-left: 10px;
 #firebaseui-auth-container:empty {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   min-height: 200px;
+}
+
+#firebaseui-auth-container:empty::before {
+    content: ' ';
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 2px solid #717171;
+    border-bottom: 2px solid #717171;
+    border-radius: 50%;
+    animation: 1.5s ease-in-out infinite fill-up;
+}
+
+@keyframes fill-up {
+  0% { border-bottom-width: 2px; }
+  100% { border-bottom-width: 48px; }
 }
 
 #firebaseui-auth-container:empty::after {
@@ -411,5 +452,4 @@ margin-left: 10px;
   display: block;
   text-align: center;
   text-transform: uppercase;
-  flex: 1;
 }
