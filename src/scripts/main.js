@@ -1,4 +1,4 @@
-import checkLogin  from './lib/login';
+/*import checkLogin  from './lib/login';*/
 import forms from '../data/forms';
 import { show, hide } from './lib/animation';
 import { renderInput } from './lib/templates';
@@ -59,5 +59,5 @@ window.addEventListener('hashchange', () => {
 
 // Start this mother.
 window.addEventListener('load', function() {
-  checkLogin(initialize.bind(null, forms));
+  initialize(forms);
 });

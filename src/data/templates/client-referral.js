@@ -1,3 +1,5 @@
+/* #7 TEMPLATE */
+
 export default `
 Hey {{client_name}},<br>
 <br>

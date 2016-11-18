@@ -9,21 +9,6 @@
     <!-- Dependencies -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,600,900" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css" />
-
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAZqjjLMngTAiSPJfEPengclyItBU_pjaQ",
-        authDomain: "unfuck-my-email.firebaseapp.com",
-        databaseURL: "https://unfuck-my-email.firebaseio.com",
-        storageBucket: "unfuck-my-email.appspot.com",
-        messagingSenderId: "856479394894"
-      };
-      firebase.initializeApp(config);
-    </script>
 
     <!-- App styles -->
     <link href="./static/css/main.css" rel="stylesheet">
@@ -40,17 +25,6 @@
       <a href="./about.html" class="site-nav__link">
         About
       </a>
-      <div class="site-nav__user-info user-info">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-             class="user-info__photo user-info__photo--hidden">
-        <div class="user-info__block">
-          <span class="user-info__name"></span>
-          <a href="./login.html"
-             class="user-info__logout btn btn-default">
-            Log In or Create an Account
-          </a>
-        </div>
-      </div>
     </nav>
 
     <div id="form-chooser" class="container">
