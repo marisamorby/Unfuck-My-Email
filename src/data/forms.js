@@ -1,4 +1,5 @@
 export default [
+/* #6 TEMPLATE */
   {
     category: 'damage-control',
     name: 'The client didn’t respond to my last email about a missed deadline.',
@@ -87,6 +88,7 @@ export default [
       },
     ],
   },
+  /* #5 TEMPLATE */
   {
     category: 'damage-control',
     name: 'The client didn’t get me what I needed and we missed a deadline.',
@@ -153,6 +155,7 @@ export default [
       },
     ],
   },
+  /* #4 TEMPLATE */
   {
     category: 'damage-control',
     name: 'We’re coming up on a deadline and I need more information.',
@@ -256,6 +259,7 @@ export default [
       },
     ],
   },
+  /* #3 TEMPLATE */
   {
     category: 'damage-control',
     name: 'My client is asking for lots of extra things.',
@@ -284,6 +288,7 @@ export default [
       },
     ],
   },
+  /* #2 TEMPLATE */
   {
     category: 'project-lifecycle',
     name: 'Project Contract',
@@ -409,48 +414,7 @@ export default [
       },
     ],
   },
-  /*{
-    name: 'Cookies',
-    heading: 'Who likes cookies?',
-    subheading: 'I do! I do!',
-    slug: 'cookies',
-    template_id: 'template-cookies',
-    questions: [
-      {
-        type: 'text',
-        label: 'What is your name?',
-        name: 'name',
-        id: 'name',
-      },
-      {
-        type: 'radio',
-        label: 'What is your favoritie cookie?',
-        name: 'cookie',
-        options: [
-          {
-            id: 'sugar',
-            label: 'Sugar Cookies',
-            value: 'I love cookies! Sugar cookies are my favorite.',
-          },
-          {
-            id: 'chocolate_chip',
-            label: 'Chocolate Chip',
-            value: 'I love cookies! Chocolate chip cookies are my favorite.',
-          },
-          {
-            id: 'oatmeal',
-            label: 'Oatmeal',
-            value: 'I love cookies! But I oatmeal cookies are my favorite, so you shouldn’t trust my judgment.',
-          },
-          {
-            id: 'nope',
-            label: 'I don’t like cookies',
-            value: 'I am a terrible person.',
-          },
-        ],
-      },
-    ],
-  },*/
+  /* #1 TEMPLATE */
   {
     category: 'project-lifecycle',
     name: 'Follow-Up After a First Meeting',
@@ -576,6 +540,7 @@ export default [
       },
     ],
   },
+  /* #7 TEMPLATE */
   {
     category: 'project-lifecycle',
     name: 'I’d like to get a referral from my client.',
@@ -622,6 +587,7 @@ export default [
       },
     ],
   },  
+  /* #8 TEMPLATE */
   {
     category: 'project-lifecycle',
     name: 'I want to get feedback on a completed project.',
@@ -649,5 +615,50 @@ export default [
         id: 'client_survey',
       }  
     ], 
-  },   
+  }, 
+  /* #9 TEMPLATE */
+  {
+    category: 'damage-control',
+    name: 'I need to say no to a client and don’t refer them.',
+    heading: 'Just say no...',
+    subheading: 'to clients that drive you crazy.',
+    slug: 'no',
+    template_id: 'client-no',
+    questions: [
+      {
+        type: 'text',
+        label: 'What’s your name?',
+        name: 'name',
+        id: 'name',
+      },
+      {
+        type: 'text',
+        label: 'What’s your client’s name?',
+        name: 'client_name',
+        id: 'client_name',
+      },
+      {
+        type: 'radio',
+        label: 'Pick a freelance hiring board',
+        name: 'hiring_board',
+        options: [
+          {
+            id: 'board_one',
+            label: 'Cloud Peeps',
+            value: 'Cloud Peeps',
+          },
+          {
+            id: 'board_two',
+            label: 'Upwork',
+            value: 'Upwork',
+          },
+          {
+            id: 'board_three',
+            label: 'Freelancer',
+            value: 'Freelancer',
+          },
+        ],
+      },
+    ],
+  },
 ];

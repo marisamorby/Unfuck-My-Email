@@ -10,6 +10,7 @@ import inputText from './input-text';
 import inputRadio from './input-radio';
 import clientReferral from './client-referral';
 import clientFeedback from './client-feedback';
+import clientNo from './client-no';
 
 export default {
   'contract-template': contractTemplate,
@@ -24,4 +25,5 @@ export default {
   'input-radio': inputRadio,
   'client-referral': clientReferral,
   'client-feedback': clientFeedback,
+  'client-no': clientNo,
 };
