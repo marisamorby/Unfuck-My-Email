@@ -1,4 +1,4 @@
-const checkLogin = callback => {
+/*const checkLogin = callback => {
   firebase.auth().onAuthStateChanged(user => {
 
     // Get the elements we need to update on login/logout.
@@ -60,4 +60,4 @@ const checkLogin = callback => {
   });
 };
 
-export default checkLogin;
+export default checkLogin; */
