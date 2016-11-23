@@ -619,7 +619,7 @@ export default [
   /* #9 TEMPLATE */
   {
     category: 'damage-control',
-    name: 'I need to say no to a client and don’t refer them.',
+    name: 'I need to say no to a client and don’t want to refer them.',
     heading: 'Just say no...',
     subheading: 'to clients that drive you crazy.',
     slug: 'no',
